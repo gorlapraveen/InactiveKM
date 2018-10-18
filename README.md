@@ -53,7 +53,7 @@ Next,
 **Usage** : 
 
  
-         inactivity [mode] [Time_In_Minutes] [Battery_Percentage] 
+          ./inactivity.sh [mode] [Time_In_Minutes] [Battery_Percentage] 
 
 
 Then within the same directory, See for its [More detailed use and example](/README.md#more-detailed-use-)   
