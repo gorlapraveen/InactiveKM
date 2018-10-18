@@ -7,4 +7,16 @@ your sleeping activity. Or else when you dont know the specific time to issue a 
 
 Here is the Linux script package to help you!
 
-##what?
+## what?
+* This script can automatically perform the following activities after a period of `Physical Inactivity`.
+        
+
+    |Mode | About mode |
+    |:-----|:----------|
+    |haltmode | Halts the system. |
+    |poweroffmode | Powers off the system.  |
+    |rebootmode   |  Restarts the system.  |
+    |suspendmode |Suspends the system.|
+    |hibernatemode | Hibernates the system. |
+    |hybrid-sleepmode | Hibernates and suspends the system.|
+    
