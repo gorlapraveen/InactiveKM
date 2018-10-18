@@ -33,9 +33,12 @@ For Debian based systems such as Debian and Ubuntu
 
 Next,
 
-**Usage** : `inactivity [mode] [Time_In_Minutes] [Battery_Percentage]`    
+**Usage** : 
 
- For more details,See for its [More Detailed Use](/README.md#more-detailed-use-) .
+
+     inactivity [mode] [Time_In_Minutes] [Battery_Percentage]    
+
+ For more details,See for its [More detailed use and example](/README.md#more-detailed-use-) .
  
 ### Normal Installation : [Specific to current directory]  
 
@@ -47,10 +50,13 @@ Next,
  
 Next,
 
-**Usage** : `inactivity [mode] [Time_In_Minutes] [Battery_Percentage]`    
+**Usage** : 
+
+ 
+         inactivity [mode] [Time_In_Minutes] [Battery_Percentage] 
 
 
-Then within the same directory, See for its [More Detailed Use](/README.md#more-detailed-use-)   
+Then within the same directory, See for its [More detailed use and example](/README.md#more-detailed-use-)   
 
 
 ## More Detailed Use :
