@@ -1,4 +1,9 @@
 #!/bin/bash
+#Gorla Praveen <gorlapraveen@gmail.com>
+#This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published bythe Free Software Foundation, either version 3 of the License, or any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+#You should have received a copy of the GNU General Public License along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
 
 usage()
 {
@@ -9,7 +14,7 @@ echo 'Suppoted System Action in (time) in minutes : numerical'
 echo ' '
 echo 'Supported System Action in (Battery) Level : 1 to 100 values'
 echo ''
-echo 'Example usage: sleep 60 30  # System "sleeps" after 60 minutes or when below 30 % of battery level, or which ever comes earlier when Keyboard/mouse is inactivite.'
+echo 'Example usage: suspendmode 60 30  # System "suspends" after 60 minutes or when below 30 % of battery level, or which ever comes earlier when Keyboard/mouse is inactivite.'
 echo '-------------------------------------------------------------------------------------------'
 
 }
