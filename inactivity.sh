@@ -2,13 +2,15 @@
 
 usage()
 {
+echo '--------------------------------------------------------------------------------------------'
 echo 'Supported System Action (mode) : haltmode, poweroffmode, rebootmode, suspendmode, hibernatemode, hybrid-sleepmode'
 echo ' '
 echo 'Suppoted System Action in (time) in minutes : numerical' 
 echo ' '
 echo 'Supported System Action in (Battery) Level : 1 to 100 values'
 echo ''
-echo 'Example Usage: sleep 60 30  # System "sleeps" after 60 minutes or when below 30 % of battery level, or which ever comes earlier when Keyboard/mouse is inactivite'
+echo 'Example usage: sleep 60 30  # System "sleeps" after 60 minutes or when below 30 % of battery level, or which ever comes earlier when Keyboard/mouse is inactivite.'
+echo '-------------------------------------------------------------------------------------------'
 
 }
 
