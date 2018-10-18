@@ -53,7 +53,7 @@ else
   restartmode )
    bash inactivitymode.sh $1 $2 
    ;;
-  *) echo 'Mode' "$1" 'is not a correct option'
+  *) echo 'Mode:' "$1" ' - is not a correct option'
      usage
    ;;
  esac
