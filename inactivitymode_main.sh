@@ -2,7 +2,7 @@
 
 usage()
 {
-echo 'Supported System Action (mode) : sleepmode, suspend, hibernate, shutdown. restart'
+echo 'Supported System Action (mode) : haltmode, poweroffmode, rebootmode, suspendmode, hibernatemode, hybrid-sleepmode'
 echo ' '
 echo 'Suppoted System Action in (time) in minutes : numerical' 
 echo ' '
@@ -18,7 +18,7 @@ mode=$1
 time_period=$2
 Battery_level=$3
 echo "$mode" "$time_period" "$Battery_level"
-#1 minute = 1000 Milliseconds
+#1 minute = 6000 Milliseconds
 #]sleepmode=sleepmode
 #hibernatemode=hibernatemode
 #suspendmode=suspendmode
@@ -27,31 +27,58 @@ echo "$mode" "$time_period" "$Battery_level"
 #echo $restartmode $sleepmode
 
 if [[ ! $time_period =~ ^[[:digit:]]+$ ]]; then
- echo Hey $USER, please input only an integer value
+ echo Hey $USER, "$2" is not an Integer value, please input only an integer value
  usage
 
 #elif [[ "$mode" != 'sleepmode' ]] || [[ "$mode" != 'hibernatemode' ]] || [[ "$mode" != 'suspendmode' ]] || [[ "$mode" != '$shutdownmode' ]] || [[ "$mode" != '$restartmode' ]]; then 
 #echo Hey $USER, please use appropriate mode
  #usage
 elif [[ ! $Battery_level =~ ^[[:digit:]]+$ ]]; then
- echo $USER, please input an integer
+ echo $USER, "$3" is not an Integer value, please input only an integer value
  usage
 else
  case "$1" in
-  sleepmode )
-   bash inactivitymode.sh $1 $2 
+  haltmode )
+   echo > inactivity.txt
+   echo $1 >inactivity.txt
+   echo $2 >>inactivity.txt
+   echo $3 >>inactivity.txt
+   bash inactivitymode.sh 
    ;;
-  hibernatemode )
-   bash inactivitymode.sh $1 $2 
+  poweroffmoode )
+   echo > inactivity.txt
+   echo $1 >inactivity.txt
+   echo $2 >>inactivity.txt
+   echo $3 >>inactivity.txt
+   bash inactivitymode.sh
+   ;;
+  rebootmode )
+   echo > inactivity.txt
+   echo $1 >inactivity.txt
+   echo $2 >>inactivity.txt
+   echo $3 >>inactivity.txt
+   bash inactivitymode.sh
    ;;
   suspendmode )
-   bash inactivitymode.sh $1 $2 
+   echo > inactivity.txt
+   echo $1 >inactivity.txt
+   echo $2 >>inactivity.txt
+   echo $3 >>inactivity.txt
+   bash inactivitymode.sh $1 $2 $3
    ;;
-  shutdownmode )
-   bash inactivitymode.sh $1 $2 
+  hibernatemode )
+   echo > inactivity.txt
+   echo $1 >inactivity.txt
+   echo $2 >>inactivity.txt
+   echo $3 >>inactivity.txt
+   bash inactivitymode.sh $1 $2 $3
    ;;
-  restartmode )
-   bash inactivitymode.sh $1 $2 
+  hybrid-sleepmode )
+   echo > inactivity.txt
+   echo $1 >inactivity.txt
+   echo $2 >>inactivity.txt
+   echo $3 >>inactivity.txt
+   bash inactivitymode.sh $1 $2 $3
    ;;
   *) echo 'Mode:' "$1" ' - is not a correct option'
      usage
