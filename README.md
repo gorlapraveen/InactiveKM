@@ -72,7 +72,7 @@ Supported System Action in `(Battery)` Level : `1 to 100` values
 
       
      Command suspendmode 60 30
-     # Command = ./inactive.sh , for local install relative to specific deirectory
+     # Command = ./inactive.sh , for Normal [local] install relative to specific current directory
      # Command = inactive ,for global installation.
      
 ** System `suspends` after `60 minutes` or when below `30 %` of battery level, or which ever comes earlier when Keyboard/mouse is inactivite.
