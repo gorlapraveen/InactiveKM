@@ -68,5 +68,9 @@ Suppoted System Action in `(time)` in `minutes` : `numerical`
 Supported System Action in `(Battery)` Level : `1 to 100` values
 
 
-**Example usage::** `suspendmode 60 30` :  # System `suspends` after `60 minutes` or when below `30 %` of battery level, or which ever comes earlier when Keyboard/mouse is inactivite.
+**Example usage::** 
+
+      
+      suspendmode 60 30
+** System `suspends` after `60 minutes` or when below `30 %` of battery level, or which ever comes earlier when Keyboard/mouse is inactivite.
 
