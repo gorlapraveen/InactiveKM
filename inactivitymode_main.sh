@@ -27,16 +27,36 @@ echo "$mode" "$time_period" "$Battery_level"
 #echo $restartmode $sleepmode
 
 if [[ ! $time_period =~ ^[[:digit:]]+$ ]]; then
- echo Hey $USER, please input only an integer 
+ echo Hey $USER, please input only an integer value
  usage
-elif [[ "$mode" != 'sleepmode' ]] || [[ "$mode" != 'hibernatemode' ]] || [[ "$mode" != 'suspendmode' ]] || [[ "$mode" != '$shutdownmode' ]] || [[ "$mode" != '$restartmode' ]]; then
- echo Hey $USER, please use appropriate mode
- usage
+
+#elif [[ "$mode" != 'sleepmode' ]] || [[ "$mode" != 'hibernatemode' ]] || [[ "$mode" != 'suspendmode' ]] || [[ "$mode" != '$shutdownmode' ]] || [[ "$mode" != '$restartmode' ]]; then 
+#echo Hey $USER, please use appropriate mode
+ #usage
 elif [[ ! $Battery_level =~ ^[[:digit:]]+$ ]]; then
  echo $USER, please input an integer
  usage
 else
- ./inactivitymode.sh 
+ case "$1" in
+  sleepmode )
+   bash inactivitymode.sh $1 $2 
+   ;;
+  hibernatemode )
+   bash inactivitymode.sh $1 $2 
+   ;;
+  suspendmode )
+   bash inactivitymode.sh $1 $2 
+   ;;
+  shutdownmode )
+   bash inactivitymode.sh $1 $2 
+   ;;
+  restartmode )
+   bash inactivitymode.sh $1 $2 
+   ;;
+  *) echo 'Mode' "$1" 'is not a correct option'
+     usage
+   ;;
+ esac
 fi
     
 
