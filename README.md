@@ -28,7 +28,7 @@ For Debian based systems such as Debian and Ubuntu
   
        git clone  #This repository
        cd inactivekm/
-       run `./setup.sh` #To install it throughout system wide.
+       run ./setup.sh #To install it throughout system wide.
        
 
 Next,
