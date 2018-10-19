@@ -9,7 +9,7 @@ sudo cp inactivity.sh /usr/local/bin/
 sudo cp inactivity.sh /usr/bin/inactivity
 sudo chmod +x /usr/bin/inactivity
 
-sudo chmod +x inactivitymode_main.sh 
+sudo chmod +x inactivitymode.sh 
 sudo cp inactivitymode.sh  /usr/local/bin/
 sudo cp inactivitymode.sh  /usr/bin/inactivitymode.sh 
 sudo chmod +x /usr/bin/inactivitymode.sh 
