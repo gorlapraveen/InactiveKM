@@ -24,15 +24,15 @@ echo '--------------------------------------------------------------------------
 mode=$1
 time_period=$2
 Battery_level=$3
-echo "$mode" "$time_period" "$Battery_level"
-#1 minute = 6000 Milliseconds
-#]sleepmode=sleepmode
-#hibernatemode=hibernatemode
-#suspendmode=suspendmode
-#shutdown=shutdownmode
-#restartmode=restartmode
+#echo "$mode" "$time_period" "$Battery_level"
+##1 minute = 6000 Milliseconds
+##]sleepmode=sleepmode
+##hibernatemode=hibernatemode
+##suspendmode=suspendmode
+##shutdown=shutdownmode
+##restartmode=restartmode
 #echo $restartmode $sleepmode
-
+#echo 'Your Sytem is in' "$1" 'after' "$2" 'minutes or below' "$3"', which ever satisfies earlier.'' Press Ctrl+z to cancel the Action Mode.'  
 if [[ ! $time_period =~ ^[[:digit:]]+$ ]]; then
  echo Hey $USER, "$2" is not an Integer value, please input only an integer value
  usage
@@ -46,6 +46,7 @@ elif [[ ! $Battery_level =~ ^[[:digit:]]+$ ]]; then
 else
  case "$1" in
   haltmode )
+   echo 'Your Sytem is in' "$1" 'after' "$2" 'minutes or below' "$3"', which ever satisfies earlier.'' Press Ctrl+z to cancel the Action Mode.'
    echo > inactivity.txt
    echo $1 >inactivity.txt
    echo $2 >>inactivity.txt
@@ -53,6 +54,7 @@ else
    bash inactivitymode.sh 
    ;;
   poweroffmoode )
+   echo 'Your Sytem is in' "$1" 'after' "$2" 'minutes or below' "$3"', which ever satisfies earlier.'' Press Ctrl+z to cancel the Action Mode.'
    echo > inactivity.txt
    echo $1 >inactivity.txt
    echo $2 >>inactivity.txt
@@ -60,6 +62,7 @@ else
    bash inactivitymode.sh
    ;;
   rebootmode )
+   echo 'Your Sytem is in' "$1" 'after' "$2" 'minutes or below' "$3"', which ever satisfies earlier.'' Press Ctrl+z to cancel the Action Mode.'
    echo > inactivity.txt
    echo $1 >inactivity.txt
    echo $2 >>inactivity.txt
@@ -67,6 +70,7 @@ else
    bash inactivitymode.sh
    ;;
   suspendmode )
+   echo 'Your Sytem is in' "$1" 'after' "$2" 'minutes or below' "$3"', which ever satisfies earlier.'' Press Ctrl+z to cancel the Action Mode.'
    echo > inactivity.txt
    echo $1 >inactivity.txt
    echo $2 >>inactivity.txt
@@ -74,6 +78,7 @@ else
    bash inactivitymode.sh $1 $2 $3
    ;;
   hibernatemode )
+   echo 'Your Sytem is in' "$1" 'after' "$2" 'minutes or below' "$3"', which ever satisfies earlier.'' Press Ctrl+z to cancel the Action Mode.'
    echo > inactivity.txt
    echo $1 >inactivity.txt
    echo $2 >>inactivity.txt
@@ -81,6 +86,7 @@ else
    bash inactivitymode.sh $1 $2 $3
    ;;
   hybrid-sleepmode )
+   echo 'Your Sytem is in' "$1" 'after' "$2" 'minutes or below' "$3"', which ever satisfies earlier.'' Press Ctrl+z to cancel the Action Mode.'
    echo > inactivity.txt
    echo $1 >inactivity.txt
    echo $2 >>inactivity.txt

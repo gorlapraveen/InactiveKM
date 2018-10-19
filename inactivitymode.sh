@@ -9,9 +9,9 @@
 #echo "$1" "$2" "$3"
 #echo '========'
 IdleTimeMillsec=$(xprintidle)
-echo 'Idle for '"$IdleTimeMillsec"
+#echo 'Idle for '"$IdleTimeMillsec"
 BatteryStatus=$(acpi)
-echo 'Battery Status '"$BatteryStatus"
+#echo 'Battery Status '"$BatteryStatus"
 BatteryArray=($BatteryStatus)
 #echo ${BatteryArray[3]}
 BatteryArrayPer=$(echo ${BatteryArray[3]})
@@ -34,7 +34,7 @@ LenInactiveArray=${#InactivityArray[@]}
 BatteryOut=${InactivityArray[$LenInactiveArray-1]}
 TimeOut=${InactivityArray[$LenInactiveArray-2]}
 TimeOutMilli=$((($TimeOut)*6000))
-echo "$TimeOutMilli"
+#echo "$TimeOutMilli"
 ModeOut=${InactivityArray[$LenInactiveArray-3]}
 
 #Countdown timer, which can be used to give advance alaram, prior to  when certan operation is going to happen.
