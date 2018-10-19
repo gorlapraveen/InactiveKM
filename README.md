@@ -6,7 +6,7 @@ your sleeping activity. Or else when you don't predict the specific time to issu
 
 
 Here is the Linux script package to help you! It takes your prefered arguments such as `Mode` , `Inactivity period in minutes` and `Battery Percentage in Numerical`,
- based on these values of `Inactivity period in minutes` and `Battery Percentage in Numerical`mode of operation is done which ever [among bothe] satisfies earlier.
+ based on these values of `Inactivity period in minutes` and `Battery Percentage in Numerical`mode of operation is done which ever [among both the] satisfies earlier.
 
 ## what?
 * This script can automatically perform the following activities after a period of `Physical Inactivity`(such as Keyboard and Mouse) or/and below the `Battery Percentage`.
