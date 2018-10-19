@@ -1,0 +1,3 @@
+suspendmode
+20
+80

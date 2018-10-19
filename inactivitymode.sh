@@ -27,7 +27,7 @@ elif [ $BatteryArrayPerLen -eq 3 ]; then
 elif [ $BatteryArrayPerLen -lt 2 ]; then
    echo "Unknown Battery Percentage"
 fi
-echo "$BatteryArrayPerNum"
+#echo "$BatteryArrayPerNum"
 
 readarray InactivityArray < inactivity.txt
 LenInactiveArray=${#InactivityArray[@]}
@@ -124,5 +124,6 @@ elif [[ $IdleTimeMillsec -gt $TimeOutMilli ]]; then
    ;;
  esac
 else
+ sleep 40
  ./inactivitymode.sh
 fi
