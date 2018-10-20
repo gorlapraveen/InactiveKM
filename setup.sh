@@ -4,6 +4,9 @@
 
 #You should have received a copy of the GNU General Public License along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+bash -c "sudo apt install acpi" #For Current BAttery Power status
+bash -c "sudo apt install xprintidle" #For Idle Time ststus
+
 sudo chmod +x inactivity.sh
 sudo cp inactivity.sh /usr/local/bin/
 sudo cp inactivity.sh /usr/bin/inactivity
